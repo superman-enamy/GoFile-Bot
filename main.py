@@ -112,7 +112,7 @@ async def filter(bot, update):
         [
             [
                 InlineKeyboardButton(
-                    text="Open Link", url=response['directLink']),
+                    text="Open Link", url=response['downloadPage']),
                 InlineKeyboardButton(
                     text="Share Link", url=f"https://telegram.me/share/url?url={response['downloadPage']}")
             ],
