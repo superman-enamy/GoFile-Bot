@@ -107,14 +107,14 @@ async def filter(bot, update):
 
     text = f"**File Name:** `{response['fileName']}`" + "\n"
     text += f"**Download Page:** `{response['downloadPage']}`" + "\n"
-    text += f"**Direct Download Link:** `{response['directLink']}`" + "\n"
+    text += f"**Direct Download Link:** `{response['downloadPage']}`" + "\n"
     reply_markup = InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
                     text="Open Link", url=response['directLink']),
                 InlineKeyboardButton(
-                    text="Share Link", url=f"https://telegram.me/share/url?url={response['directLink']}")
+                    text="Share Link", url=f"https://telegram.me/share/url?url={response['downloadPage']}")
             ],
             [
                 InlineKeyboardButton(
